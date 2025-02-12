@@ -1,4 +1,4 @@
-//Recursión ?
+//Recursión
 #include <iostream>
 using namespace std;
 
@@ -17,18 +17,20 @@ int imprimirAsterisco(int filas, int n){
 }
 
 int main(){
-    int number;
     int n = 0;
+    int number[3];
     cout << "------------------------------------------------------------\n";
-    cout << "Ingrese un numero: ";
-    cin >> number;
+    for (int i = 0; i < 3; i++)
+    {
+        cout << "Ingrese la altura del triangulo: ";
+        cin >> number[i];
+    }
     cout << "------------------------------------------------------------\n";
     
-    if (number == 1)
+    for (int i = 0; i < 3; i++)
     {
-        cout << "*\n";
-    }else{
-        imprimirAsterisco(number, n);
+        cout << "Imprimiendo triangulo de altura: " << number[i] << "\n";
+        imprimirAsterisco(number[i], n);
     }
     
     return 0;
