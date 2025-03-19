@@ -2,19 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int imprimirAsterisco(int filas, int n){
-    //Si el valor de n iguala al número de filas, la recursión se detiene
-    if (n == filas){
-        return 0;
-    }
-    for (int i = 0; i <= n; i++){
-        cout << "*";
-    }
-    cout << "\n";
-    n++;
-    //Caso recursivo
-    imprimirAsterisco(filas, n);
-}
+int imprimirAsterisco(int filas, int n);
 
 int main(){
     int n = 0;
@@ -34,4 +22,17 @@ int main(){
     }
     
     return 0;
+}
+int imprimirAsterisco(int filas, int n){
+    //Si el valor de n iguala al número de filas, la recursión se detiene
+    if (n == filas){
+        return 0;
+    }
+    for (int i = 0; i <= n; i++){
+        cout << "*";
+    }
+    cout << "\n";
+    n++;
+    //Caso recursivo
+    imprimirAsterisco(filas, n);
 }
